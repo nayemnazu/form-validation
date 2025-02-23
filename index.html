@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Form Validation</title>
+
+    <!-- css links -->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    
+</head>
+<body>
+    <div class="container my-4">
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+              <label for="f_name" class="form-label">First name</label>
+              <input type="text" class="form-control f_name" id="f_name" name="f_name" value="Nayem" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="l_name" class="form-label">Last name</label>
+              <input type="text" class="form-control l_name" id="l_name" name="l_name" value="Nazu" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="e_mail" class="form-label">Email</label>
+              <input type="text" class="form-control" id="e_mail" required>
+                <div class="invalid-feedback">
+                  Please choose a email.
+                </div>
+            </div>
+            <div class="col-md-4">
+              <label for="city_name" class="form-label">City</label>
+              <input type="text" class="form-control city_name" name="city_name" id="city_name" required>
+              <div class="invalid-feedback">
+                Please provide a valid city.
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="zip_code" class="form-label">Zip</label>
+              <input type="text" class="form-control zip_code" name="zip_code" id="zip_code" required>
+              <div class="invalid-feedback">
+                Please provide a valid zip.
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+                <label for="formFile" class="form-label">File Upload</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Submit Here</button>
+            </div>
+        </form>
+    
+    </div>
+
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <script src="js/script.js"></script>
+</body>
+</html>
